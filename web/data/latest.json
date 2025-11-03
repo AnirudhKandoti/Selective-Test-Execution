@@ -1,129 +1,7 @@
 {
-  "generated_at": 1762205607,
-  "selection": {
-    "base": "HEAD~1",
-    "head": "HEAD",
-    "project": "examples/payments",
-    "changed_files": [],
-    "selected": [
-      "examples/payments/tests/test_payments.py::test_create_payment_success",
-      "examples/payments/tests/test_payments.py::test_create_payment_invalid_amount",
-      "examples/payments/tests/test_payments.py::test_create_payment_unsupported_currency",
-      "examples/payments/tests/test_payments.py::test_get_payment_ok",
-      "examples/payments/tests/test_utils.py::test_supported_currency_false",
-      "examples/payments/tests/test_payments.py::test_get_payment_missing",
-      "examples/payments/tests/test_utils.py::test_supported_currency_true"
-    ],
-    "budget_tests": 25,
-    "budget_time_seconds": 120
-  },
-  "explanations": {
-    "examples/payments/tests/test_payments.py::test_create_payment_success": {
-      "affected": false,
-      "fail_rate": 0.0,
-      "flaky_rate": 0.0,
-      "runtime_norm": 1.0,
-      "weights": {
-        "affected": 1.0,
-        "fail_rate": 0.5,
-        "flaky_rate": 0.2,
-        "runtime": 0.1
-      },
-      "score": 0.1,
-      "included": true,
-      "reason": "Included: high risk score within remaining budget."
-    },
-    "examples/payments/tests/test_payments.py::test_create_payment_invalid_amount": {
-      "affected": false,
-      "fail_rate": 0.0,
-      "flaky_rate": 0.0,
-      "runtime_norm": 0.175,
-      "weights": {
-        "affected": 1.0,
-        "fail_rate": 0.5,
-        "flaky_rate": 0.2,
-        "runtime": 0.1
-      },
-      "score": 0.0175,
-      "included": true,
-      "reason": "Included: high risk score within remaining budget."
-    },
-    "examples/payments/tests/test_payments.py::test_create_payment_unsupported_currency": {
-      "affected": false,
-      "fail_rate": 0.0,
-      "flaky_rate": 0.0,
-      "runtime_norm": 0.066,
-      "weights": {
-        "affected": 1.0,
-        "fail_rate": 0.5,
-        "flaky_rate": 0.2,
-        "runtime": 0.1
-      },
-      "score": 0.0066,
-      "included": true,
-      "reason": "Included: high risk score within remaining budget."
-    },
-    "examples/payments/tests/test_payments.py::test_get_payment_ok": {
-      "affected": false,
-      "fail_rate": 0.0,
-      "flaky_rate": 0.0,
-      "runtime_norm": 0.036,
-      "weights": {
-        "affected": 1.0,
-        "fail_rate": 0.5,
-        "flaky_rate": 0.2,
-        "runtime": 0.1
-      },
-      "score": 0.0036,
-      "included": true,
-      "reason": "Included: high risk score within remaining budget."
-    },
-    "examples/payments/tests/test_payments.py::test_get_payment_missing": {
-      "affected": false,
-      "fail_rate": 0.0,
-      "flaky_rate": 0.0,
-      "runtime_norm": 0.028,
-      "weights": {
-        "affected": 1.0,
-        "fail_rate": 0.5,
-        "flaky_rate": 0.2,
-        "runtime": 0.1
-      },
-      "score": 0.0028,
-      "included": true,
-      "reason": "Included: high risk score within remaining budget."
-    },
-    "examples/payments/tests/test_utils.py::test_supported_currency_true": {
-      "affected": false,
-      "fail_rate": 0.0,
-      "flaky_rate": 0.0,
-      "runtime_norm": 0.0,
-      "weights": {
-        "affected": 1.0,
-        "fail_rate": 0.5,
-        "flaky_rate": 0.2,
-        "runtime": 0.1
-      },
-      "score": 0.0,
-      "included": true,
-      "reason": "Included: high risk score within remaining budget."
-    },
-    "examples/payments/tests/test_utils.py::test_supported_currency_false": {
-      "affected": false,
-      "fail_rate": 0.0,
-      "flaky_rate": 0.0,
-      "runtime_norm": 0.033,
-      "weights": {
-        "affected": 1.0,
-        "fail_rate": 0.5,
-        "flaky_rate": 0.2,
-        "runtime": 0.1
-      },
-      "score": 0.0033,
-      "included": true,
-      "reason": "Included: high risk score within remaining budget."
-    }
-  },
+  "generated_at": 1762210583,
+  "selection": {},
+  "explanations": {},
   "history": {
     "tests": {
       "examples/payments/tests/test_payments.py::test_create_payment_success": {
@@ -131,61 +9,61 @@
         "runs": 1,
         "fails": 0,
         "flaky": 0,
-        "avg_duration": 0.02312370000026931
+        "avg_duration": 0.017417300000488467
       },
       "examples/payments/tests/test_payments.py::test_create_payment_invalid_amount": {
         "nodeid": "examples/payments/tests/test_payments.py::test_create_payment_invalid_amount",
         "runs": 1,
         "fails": 0,
         "flaky": 0,
-        "avg_duration": 0.007212200000140001
+        "avg_duration": 0.004668099999435071
       },
       "examples/payments/tests/test_payments.py::test_create_payment_unsupported_currency": {
         "nodeid": "examples/payments/tests/test_payments.py::test_create_payment_unsupported_currency",
         "runs": 1,
         "fails": 0,
         "flaky": 0,
-        "avg_duration": 0.005107800000132556
+        "avg_duration": 0.002848699999958626
       },
       "examples/payments/tests/test_payments.py::test_get_payment_ok": {
         "nodeid": "examples/payments/tests/test_payments.py::test_get_payment_ok",
         "runs": 1,
         "fails": 0,
         "flaky": 0,
-        "avg_duration": 0.004526400000031572
+        "avg_duration": 0.002838800000063202
       },
       "examples/payments/tests/test_payments.py::test_get_payment_missing": {
         "nodeid": "examples/payments/tests/test_payments.py::test_get_payment_missing",
         "runs": 1,
         "fails": 0,
         "flaky": 0,
-        "avg_duration": 0.004370500000277389
+        "avg_duration": 0.0029831000001649954
       },
       "examples/payments/tests/test_utils.py::test_supported_currency_true": {
         "nodeid": "examples/payments/tests/test_utils.py::test_supported_currency_true",
         "runs": 1,
         "fails": 0,
         "flaky": 0,
-        "avg_duration": 0.00383300000021336
+        "avg_duration": 0.003908799999408075
       },
       "examples/payments/tests/test_utils.py::test_supported_currency_false": {
         "nodeid": "examples/payments/tests/test_utils.py::test_supported_currency_false",
         "runs": 1,
         "fails": 0,
         "flaky": 0,
-        "avg_duration": 0.004467899999781366
+        "avg_duration": 0.0030574000002161483
       }
     },
     "coverage_map": {},
     "test_to_files": {},
     "runs": [
       {
-        "time": 1762205600,
+        "time": 1762210583,
         "project": "examples/payments",
         "count": 7,
         "failed": 0
       }
     ],
-    "updated_at": 1762205600
+    "updated_at": 1762210583
   }
 }
