@@ -1,0 +1,26 @@
+
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ste-agent-explain"
+version = "0.2.0"
+description = "AI-Driven Selective Test Execution with Dev Assistant Agent and Explanation UI"
+authors = [{name="Your Name"}]
+requires-python = ">=3.10"
+dependencies = []
+
+[tool.coverage.run]
+branch = true
+dynamic_context = "test_function"
+data_file = "state/.coverage"
+concurrency = ["thread"]
+
+[tool.coverage.report]
+show_missing = true
+
+[tool.coverage.json]
+output = "state/coverage.json"
+pretty_print = true
+show_contexts = true
