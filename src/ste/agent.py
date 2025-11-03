@@ -21,17 +21,13 @@ def _normalize_runtime(stats: Dict[str, TestStats]) -> Dict[str, float]:
     span = max(mx - mn, 1e-6)
     return {k: (s.avg_duration - mn) / span if s.avg_duration > 0 else 0.0 for k, s in stats.items()}
 
-from typing import Set, List
-from .storage import History
-import os
+
 
 def _affected_tests(h: History, changed_files: List[str]) -> Set[str]:
-    """Return tests affected by the list of changed files (Windows-safe, robust)."""
     def norm(p: str) -> str:
         return p.replace("\\", "/")
 
     affected = set()
-    # Normalize coverage_map keys once
     cov_keys_norm = {norm(k): k for k in h.coverage_map.keys()}
     cov_basenames = {os.path.basename(norm(k)): k for k in h.coverage_map.keys()}
 
@@ -39,20 +35,15 @@ def _affected_tests(h: History, changed_files: List[str]) -> Set[str]:
         f_n = norm(f)
         f_base = os.path.basename(f_n)
 
-        # 1) exact key match (raw or normalized)
         if f in h.coverage_map:
-            affected.update(h.coverage_map[f])
-            continue
+            affected.update(h.coverage_map[f]); continue
         if f_n in cov_keys_norm:
-            affected.update(h.coverage_map[cov_keys_norm[f_n]])
-            continue
+            affected.update(h.coverage_map[cov_keys_norm[f_n]]); continue
 
-        # 2) suffix match against normalized keys (handles rel/abs differences)
         for k_norm, k_raw in cov_keys_norm.items():
             if k_norm.endswith("/" + f_n) or k_norm == f_n:
                 affected.update(h.coverage_map[k_raw])
 
-        # 3) basename fallback (e.g., just "utils.py")
         if f_base in cov_basenames:
             affected.update(h.coverage_map[cov_basenames[f_base]])
 

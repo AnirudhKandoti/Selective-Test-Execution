@@ -1,5 +1,5 @@
 {
-  "generated_at": 1762210583,
+  "generated_at": 1762211098,
   "selection": {},
   "explanations": {},
   "history": {
@@ -9,61 +9,61 @@
         "runs": 1,
         "fails": 0,
         "flaky": 0,
-        "avg_duration": 0.017417300000488467
+        "avg_duration": 0.01752070000020467
       },
       "examples/payments/tests/test_payments.py::test_create_payment_invalid_amount": {
         "nodeid": "examples/payments/tests/test_payments.py::test_create_payment_invalid_amount",
         "runs": 1,
         "fails": 0,
         "flaky": 0,
-        "avg_duration": 0.004668099999435071
+        "avg_duration": 0.0038855000002513407
       },
       "examples/payments/tests/test_payments.py::test_create_payment_unsupported_currency": {
         "nodeid": "examples/payments/tests/test_payments.py::test_create_payment_unsupported_currency",
         "runs": 1,
         "fails": 0,
         "flaky": 0,
-        "avg_duration": 0.002848699999958626
+        "avg_duration": 0.0028400999999576015
       },
       "examples/payments/tests/test_payments.py::test_get_payment_ok": {
         "nodeid": "examples/payments/tests/test_payments.py::test_get_payment_ok",
         "runs": 1,
         "fails": 0,
         "flaky": 0,
-        "avg_duration": 0.002838800000063202
+        "avg_duration": 0.004463400000531692
       },
       "examples/payments/tests/test_payments.py::test_get_payment_missing": {
         "nodeid": "examples/payments/tests/test_payments.py::test_get_payment_missing",
         "runs": 1,
         "fails": 0,
         "flaky": 0,
-        "avg_duration": 0.0029831000001649954
+        "avg_duration": 0.00288040000032197
       },
       "examples/payments/tests/test_utils.py::test_supported_currency_true": {
         "nodeid": "examples/payments/tests/test_utils.py::test_supported_currency_true",
         "runs": 1,
         "fails": 0,
         "flaky": 0,
-        "avg_duration": 0.003908799999408075
+        "avg_duration": 0.0029436999993777135
       },
       "examples/payments/tests/test_utils.py::test_supported_currency_false": {
         "nodeid": "examples/payments/tests/test_utils.py::test_supported_currency_false",
         "runs": 1,
         "fails": 0,
         "flaky": 0,
-        "avg_duration": 0.0030574000002161483
+        "avg_duration": 0.002872600000046077
       }
     },
     "coverage_map": {},
     "test_to_files": {},
     "runs": [
       {
-        "time": 1762210583,
+        "time": 1762211098,
         "project": "examples/payments",
         "count": 7,
         "failed": 0
       }
     ],
-    "updated_at": 1762210583
+    "updated_at": 1762211098
   }
 }
