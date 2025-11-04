@@ -1,3 +1,6 @@
+![CI](https://github.com/AnirudhKandoti/AI-based-Selective-Test-Execution/actions/workflows/ste.yml/badge.svg)
+
+> AI-Driven Selective Test Execution with Dev Assistant Agent + Explanation UI
 
 # AI-Driven Selective Test Execution (STE) — Dev Assistant Agent + Explanation UI
 
