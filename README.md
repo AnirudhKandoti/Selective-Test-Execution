@@ -2,6 +2,35 @@
 
 > AI-Driven Selective Test Execution with Dev Assistant Agent + Explanation UI
 
+## Live Demo & Screenshots
+
+**Live dashboard:** https://anirudhkandoti.github.io/AI-based-Selective-Test-Execution/
+
+<table>
+  <tr>
+    <td><strong>Changed file → Affected selection</strong></td>
+    <td><strong>Baseline / Not affected</strong></td>
+  </tr>
+  <tr>
+    <td><img src="docs/img/dashboard-affected.png" alt="Affected selection" width="480"></td>
+    <td><img src="docs/img/dashboard-not-affected.png" alt="Not affected selection" width="480"></td>
+  </tr>
+</table>
+
+<details>
+<summary>More views (optional)</summary>
+
+**History**
+<br>
+<img src="docs/img/dashboard-history.png" alt="History view" width="680">
+
+**Local UI**
+<br>
+<img src="docs/img/local-run.png" alt="Local dashboard at http://localhost:8080" width="680">
+
+</details>
+
+
 # AI-Driven Selective Test Execution (STE) — Dev Assistant Agent + Explanation UI
 
 Speed up CI by running only the **right** tests per change. This fork adds a **Dev Assistant Agent** that computes risk
