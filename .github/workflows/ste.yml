@@ -37,19 +37,16 @@ jobs:
           fi
 
       - name: Record baseline
-        env:
-          PYTHONPATH: ${{ github.workspace }}
-        run: python -m src.cli.ste_cli record-run --project examples/payments
+        env: { PYTHONPATH: ${{ github.workspace }} }
+        run: python -m src.cli.ste_cli record-run
 
       - name: Select tests for diff
-        env:
-          PYTHONPATH: ${{ github.workspace }}
-        run: python -m src.cli.ste_cli select --project examples/payments --base ${{ steps.base.outputs.base_ref }} --head HEAD --budget-tests 25
+        env: { PYTHONPATH: ${{ github.workspace }} }
+        run: python -m src.cli.ste_cli select --base ${{ steps.base.outputs.base_ref }} --head HEAD --budget-tests 25
 
       - name: Run selected tests
-        env:
-          PYTHONPATH: ${{ github.workspace }}
-        run: python -m src.cli.ste_cli run-selected --project examples/payments
+        env: { PYTHONPATH: ${{ github.workspace }} }
+        run: python -m src.cli.ste_cli run-selected
 
       - name: Upload dashboard artifact
         uses: actions/upload-artifact@v4
