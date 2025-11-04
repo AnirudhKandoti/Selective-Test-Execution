@@ -27,25 +27,25 @@ def _affected_tests(h: History, changed_files: List[str]) -> Set[str]:
     def norm(p: str) -> str:
         return p.replace("\\", "/")
 
-    affected = set()
+    affected: Set[str] = set()
+
+    changed_norm = [norm(f) for f in changed_files]
+    changed_basenames = {os.path.basename(f) for f in changed_norm}
+
     cov_keys_norm = {norm(k): k for k in h.coverage_map.keys()}
-    cov_basenames = {os.path.basename(norm(k)): k for k in h.coverage_map.keys()}
-
-    for f in changed_files:
-        f_n = norm(f)
-        f_base = os.path.basename(f_n)
-
-        if f in h.coverage_map:
-            affected.update(h.coverage_map[f]); continue
-        if f_n in cov_keys_norm:
-            affected.update(h.coverage_map[cov_keys_norm[f_n]]); continue
-
+    for f in changed_norm:
+        if f in cov_keys_norm:
+            affected.update(h.coverage_map[cov_keys_norm[f]])
         for k_norm, k_raw in cov_keys_norm.items():
-            if k_norm.endswith("/" + f_n) or k_norm == f_n:
+            if k_norm == f or k_norm.endswith("/" + f) or os.path.basename(k_norm) in changed_basenames:
                 affected.update(h.coverage_map[k_raw])
 
-        if f_base in cov_basenames:
-            affected.update(h.coverage_map[cov_basenames[f_base]])
+    for nodeid, files in h.test_to_files.items():
+        for file_path in files:
+            kn = norm(file_path)
+            if kn in changed_norm or any(kn.endswith("/" + c) for c in changed_norm) or os.path.basename(kn) in changed_basenames:
+                affected.add(nodeid)
+                break
 
     return affected
 

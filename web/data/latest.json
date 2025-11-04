@@ -1,69 +1,137 @@
 {
-  "generated_at": 1762211098,
-  "selection": {},
-  "explanations": {},
+  "generated_at": 1762214712,
+  "selection": {
+    "base": "HEAD~1",
+    "head": "HEAD",
+    "project": "examples/payments",
+    "changed_files": [
+      "examples/payments/app/utils.py"
+    ],
+    "selected": [
+      "examples/payments/tests/test_utils.py::test_supported_currency_false"
+    ],
+    "budget_tests": 25,
+    "budget_time_seconds": 120
+  },
+  "explanations": {
+    "examples/payments/tests/test_utils.py::test_supported_currency_false": {
+      "affected": true,
+      "fail_rate": 0.0,
+      "flaky_rate": 0.0,
+      "runtime_norm": 0.0,
+      "weights": {
+        "affected": 1.0,
+        "fail_rate": 0.5,
+        "flaky_rate": 0.2,
+        "runtime": 0.1
+      },
+      "score": 1.0,
+      "included": true,
+      "reason": "Included: directly affected by changed files."
+    }
+  },
   "history": {
     "tests": {
-      "examples/payments/tests/test_payments.py::test_create_payment_success": {
-        "nodeid": "examples/payments/tests/test_payments.py::test_create_payment_success",
-        "runs": 1,
-        "fails": 0,
-        "flaky": 0,
-        "avg_duration": 0.01752070000020467
-      },
-      "examples/payments/tests/test_payments.py::test_create_payment_invalid_amount": {
-        "nodeid": "examples/payments/tests/test_payments.py::test_create_payment_invalid_amount",
-        "runs": 1,
-        "fails": 0,
-        "flaky": 0,
-        "avg_duration": 0.0038855000002513407
-      },
-      "examples/payments/tests/test_payments.py::test_create_payment_unsupported_currency": {
-        "nodeid": "examples/payments/tests/test_payments.py::test_create_payment_unsupported_currency",
-        "runs": 1,
-        "fails": 0,
-        "flaky": 0,
-        "avg_duration": 0.0028400999999576015
-      },
-      "examples/payments/tests/test_payments.py::test_get_payment_ok": {
-        "nodeid": "examples/payments/tests/test_payments.py::test_get_payment_ok",
-        "runs": 1,
-        "fails": 0,
-        "flaky": 0,
-        "avg_duration": 0.004463400000531692
-      },
-      "examples/payments/tests/test_payments.py::test_get_payment_missing": {
-        "nodeid": "examples/payments/tests/test_payments.py::test_get_payment_missing",
-        "runs": 1,
-        "fails": 0,
-        "flaky": 0,
-        "avg_duration": 0.00288040000032197
-      },
-      "examples/payments/tests/test_utils.py::test_supported_currency_true": {
-        "nodeid": "examples/payments/tests/test_utils.py::test_supported_currency_true",
-        "runs": 1,
-        "fails": 0,
-        "flaky": 0,
-        "avg_duration": 0.0029436999993777135
-      },
       "examples/payments/tests/test_utils.py::test_supported_currency_false": {
         "nodeid": "examples/payments/tests/test_utils.py::test_supported_currency_false",
         "runs": 1,
         "fails": 0,
         "flaky": 0,
-        "avg_duration": 0.002872600000046077
+        "avg_duration": 0.027583900000536232
       }
     },
-    "coverage_map": {},
-    "test_to_files": {},
+    "coverage_map": {
+      "examples/payments/app/utils.py": [
+        "examples/payments/tests/test_payments.py::test_create_payment_invalid_amount",
+        "examples/payments/tests/test_payments.py::test_create_payment_success",
+        "examples/payments/tests/test_payments.py::test_create_payment_unsupported_currency",
+        "examples/payments/tests/test_payments.py::test_get_payment_missing",
+        "examples/payments/tests/test_payments.py::test_get_payment_ok",
+        "examples/payments/tests/test_utils.py::test_supported_currency_false",
+        "examples/payments/tests/test_utils.py::test_supported_currency_true"
+      ],
+      "examples/payments/app/__init__.py": [
+        "examples/payments/tests/test_payments.py::test_create_payment_invalid_amount",
+        "examples/payments/tests/test_payments.py::test_create_payment_success",
+        "examples/payments/tests/test_payments.py::test_create_payment_unsupported_currency",
+        "examples/payments/tests/test_payments.py::test_get_payment_missing",
+        "examples/payments/tests/test_payments.py::test_get_payment_ok",
+        "examples/payments/tests/test_utils.py::test_supported_currency_false",
+        "examples/payments/tests/test_utils.py::test_supported_currency_true"
+      ],
+      "examples/payments/tests/test_payments.py": [
+        "examples/payments/tests/test_payments.py::test_create_payment_invalid_amount",
+        "examples/payments/tests/test_payments.py::test_create_payment_success",
+        "examples/payments/tests/test_payments.py::test_create_payment_unsupported_currency",
+        "examples/payments/tests/test_payments.py::test_get_payment_missing",
+        "examples/payments/tests/test_payments.py::test_get_payment_ok"
+      ],
+      "examples/payments/app/payments.py": [
+        "examples/payments/tests/test_payments.py::test_create_payment_invalid_amount",
+        "examples/payments/tests/test_payments.py::test_create_payment_success",
+        "examples/payments/tests/test_payments.py::test_create_payment_unsupported_currency",
+        "examples/payments/tests/test_payments.py::test_get_payment_missing",
+        "examples/payments/tests/test_payments.py::test_get_payment_ok",
+        "examples/payments/tests/test_utils.py::test_supported_currency_false",
+        "examples/payments/tests/test_utils.py::test_supported_currency_true"
+      ],
+      "examples/payments/tests/test_utils.py": [
+        "examples/payments/tests/test_utils.py::test_supported_currency_false",
+        "examples/payments/tests/test_utils.py::test_supported_currency_true"
+      ]
+    },
+    "test_to_files": {
+      "examples/payments/tests/test_payments.py::test_create_payment_success": [
+        "examples/payments/app/__init__.py",
+        "examples/payments/app/payments.py",
+        "examples/payments/app/utils.py",
+        "examples/payments/tests/test_payments.py"
+      ],
+      "examples/payments/tests/test_payments.py::test_create_payment_invalid_amount": [
+        "examples/payments/app/__init__.py",
+        "examples/payments/app/payments.py",
+        "examples/payments/app/utils.py",
+        "examples/payments/tests/test_payments.py"
+      ],
+      "examples/payments/tests/test_payments.py::test_create_payment_unsupported_currency": [
+        "examples/payments/app/__init__.py",
+        "examples/payments/app/payments.py",
+        "examples/payments/app/utils.py",
+        "examples/payments/tests/test_payments.py"
+      ],
+      "examples/payments/tests/test_payments.py::test_get_payment_ok": [
+        "examples/payments/app/__init__.py",
+        "examples/payments/app/payments.py",
+        "examples/payments/app/utils.py",
+        "examples/payments/tests/test_payments.py"
+      ],
+      "examples/payments/tests/test_payments.py::test_get_payment_missing": [
+        "examples/payments/app/__init__.py",
+        "examples/payments/app/payments.py",
+        "examples/payments/app/utils.py",
+        "examples/payments/tests/test_payments.py"
+      ],
+      "examples/payments/tests/test_utils.py::test_supported_currency_true": [
+        "examples/payments/app/__init__.py",
+        "examples/payments/app/payments.py",
+        "examples/payments/app/utils.py",
+        "examples/payments/tests/test_utils.py"
+      ],
+      "examples/payments/tests/test_utils.py::test_supported_currency_false": [
+        "examples/payments/app/__init__.py",
+        "examples/payments/app/payments.py",
+        "examples/payments/app/utils.py",
+        "examples/payments/tests/test_utils.py"
+      ]
+    },
     "runs": [
       {
-        "time": 1762211098,
+        "time": 1762214671,
         "project": "examples/payments",
-        "count": 7,
+        "count": 1,
         "failed": 0
       }
     ],
-    "updated_at": 1762211098
+    "updated_at": 1762214671
   }
 }

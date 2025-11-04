@@ -12,6 +12,8 @@ from src.ste.coverage_map import build_maps
 from src.ste.git_diff import changed_files
 from src.ste.agent import rank_with_explanations
 from src.ste.report import write_report
+from src.ste.coverage_map import build_maps
+from src.ste.probe import probe_maps
 
 app = typer.Typer(help="Selective Test Execution (STE) CLI w/ Dev Assistant Agent")
 
@@ -27,6 +29,13 @@ def record_run(project: Optional[str] = typer.Option(None, "--project", help="Pa
         print(f"[yellow]pytest exit code: {code}[/yellow]")
 
     file_to_tests, test_to_files = build_maps(cfg.state_dir, os.getcwd())
+    hist = load_history(cfg.state_dir)
+    if not file_to_tests:  # contexts missing/empty? fall back to per-test probe
+       print("[yellow]No per-test contexts detected in coverage.json; running per-test probe (one pass) ...[/yellow]")
+       file_to_tests, test_to_files = probe_maps(cfg.project_path, cfg.state_dir, os.getcwd())
+
+    hist.coverage_map = file_to_tests
+    hist.test_to_files = test_to_files
 
     hist = load_history(cfg.state_dir)
     hist.coverage_map = file_to_tests
