@@ -9,3 +9,5 @@ def is_supported_currency(code: str) -> bool:
 # trigger diff
 
 # pages demo: touch to show 'affected'
+
+# pages demo: change
