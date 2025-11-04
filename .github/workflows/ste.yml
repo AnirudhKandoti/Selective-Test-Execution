@@ -7,11 +7,10 @@ on:
 jobs:
   ste:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v4
         with:
-          fetch-depth: 0  # we need history for diffs
+          fetch-depth: 0  # need history for diffs
 
       - uses: actions/setup-python@v5
         with:
@@ -21,7 +20,7 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
-          pip install pytest-cov==4.1.0   # safe no-op if already present
+          pip install pytest-cov==4.1.0   # no-op if already present
           pip freeze | grep -i -E 'pytest|coverage' || true
 
       - name: Prepare dirs
@@ -37,15 +36,18 @@ jobs:
           fi
 
       - name: Record baseline
-        env: { PYTHONPATH: ${{ github.workspace }} }
+        env:
+          PYTHONPATH: ${{ github.workspace }}
         run: python -m src.cli.ste_cli record-run
 
       - name: Select tests for diff
-        env: { PYTHONPATH: ${{ github.workspace }} }
+        env:
+          PYTHONPATH: ${{ github.workspace }}
         run: python -m src.cli.ste_cli select --base ${{ steps.base.outputs.base_ref }} --head HEAD --budget-tests 25
 
       - name: Run selected tests
-        env: { PYTHONPATH: ${{ github.workspace }} }
+        env:
+          PYTHONPATH: ${{ github.workspace }}
         run: python -m src.cli.ste_cli run-selected
 
       - name: Upload dashboard artifact
