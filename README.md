@@ -1,6 +1,6 @@
 ![CI](https://github.com/AnirudhKandoti/AI-based-Selective-Test-Execution/actions/workflows/ste.yml/badge.svg)
 
-> AI-Driven Selective Test Execution with Dev Assistant Agent + Explanation UI
+Selective Test Execution with Dev Assistant Agent + Explanation UI
 
 ## Live Demo & Screenshots
 
@@ -31,7 +31,7 @@
 </details>
 
 
-# AI-Driven Selective Test Execution (STE) — Dev Assistant Agent + Explanation UI
+# Selective Test Execution (STE) — Dev Assistant Agent + Explanation UI
 
 Speed up CI by running only the **right** tests per change. This fork adds a **Dev Assistant Agent** that computes risk
 scores and an **explanation UI** that shows *why* each test was (de)prioritized.
