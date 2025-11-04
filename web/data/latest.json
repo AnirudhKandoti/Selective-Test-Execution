@@ -1,11 +1,11 @@
 {
-  "generated_at": 1762214712,
+  "generated_at": 1762256290,
   "selection": {
     "base": "HEAD~1",
     "head": "HEAD",
-    "project": "examples/payments",
+    "project": "C:\\Anirudh Projects\\ai-ste-agent-explain\\examples\\payments",
     "changed_files": [
-      "examples/payments/app/utils.py"
+      ".github/workflows/pages.yml"
     ],
     "selected": [
       "examples/payments/tests/test_utils.py::test_supported_currency_false"
@@ -15,7 +15,7 @@
   },
   "explanations": {
     "examples/payments/tests/test_utils.py::test_supported_currency_false": {
-      "affected": true,
+      "affected": false,
       "fail_rate": 0.0,
       "flaky_rate": 0.0,
       "runtime_norm": 0.0,
@@ -25,9 +25,9 @@
         "flaky_rate": 0.2,
         "runtime": 0.1
       },
-      "score": 1.0,
+      "score": 0.0,
       "included": true,
-      "reason": "Included: directly affected by changed files."
+      "reason": "Included: high risk score within remaining budget."
     }
   },
   "history": {
@@ -37,19 +37,10 @@
         "runs": 1,
         "fails": 0,
         "flaky": 0,
-        "avg_duration": 0.027583900000536232
+        "avg_duration": 0.011649200001556892
       }
     },
     "coverage_map": {
-      "examples/payments/app/utils.py": [
-        "examples/payments/tests/test_payments.py::test_create_payment_invalid_amount",
-        "examples/payments/tests/test_payments.py::test_create_payment_success",
-        "examples/payments/tests/test_payments.py::test_create_payment_unsupported_currency",
-        "examples/payments/tests/test_payments.py::test_get_payment_missing",
-        "examples/payments/tests/test_payments.py::test_get_payment_ok",
-        "examples/payments/tests/test_utils.py::test_supported_currency_false",
-        "examples/payments/tests/test_utils.py::test_supported_currency_true"
-      ],
       "examples/payments/app/__init__.py": [
         "examples/payments/tests/test_payments.py::test_create_payment_invalid_amount",
         "examples/payments/tests/test_payments.py::test_create_payment_success",
@@ -67,6 +58,15 @@
         "examples/payments/tests/test_payments.py::test_get_payment_ok"
       ],
       "examples/payments/app/payments.py": [
+        "examples/payments/tests/test_payments.py::test_create_payment_invalid_amount",
+        "examples/payments/tests/test_payments.py::test_create_payment_success",
+        "examples/payments/tests/test_payments.py::test_create_payment_unsupported_currency",
+        "examples/payments/tests/test_payments.py::test_get_payment_missing",
+        "examples/payments/tests/test_payments.py::test_get_payment_ok",
+        "examples/payments/tests/test_utils.py::test_supported_currency_false",
+        "examples/payments/tests/test_utils.py::test_supported_currency_true"
+      ],
+      "examples/payments/app/utils.py": [
         "examples/payments/tests/test_payments.py::test_create_payment_invalid_amount",
         "examples/payments/tests/test_payments.py::test_create_payment_success",
         "examples/payments/tests/test_payments.py::test_create_payment_unsupported_currency",
@@ -126,12 +126,12 @@
     },
     "runs": [
       {
-        "time": 1762214671,
-        "project": "examples/payments",
+        "time": 1762256287,
+        "project": "C:\\Anirudh Projects\\ai-ste-agent-explain\\examples\\payments",
         "count": 1,
         "failed": 0
       }
     ],
-    "updated_at": 1762214671
+    "updated_at": 1762256287
   }
 }
